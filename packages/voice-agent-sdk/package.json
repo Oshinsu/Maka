@@ -1,0 +1,37 @@
+{
+  "name": "@maka/voice-agent-sdk",
+  "version": "0.1.0",
+  "description": "Client SDK for Maka realtime voice training agent",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "dev": "tsup src/index.ts --format esm --dts --watch",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "test": "vitest",
+    "typecheck": "tsc --project tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "openai": "^4.52.0",
+    "tslib": "^2.6.2",
+    "webrtc-adapter": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/webrtc": "^0.0.45",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.5.4",
+    "vitest": "^1.6.0"
+  }
+}

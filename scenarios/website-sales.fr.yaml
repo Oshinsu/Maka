@@ -1,0 +1,86 @@
+id: website-sales-fr
+title: Vente d'un site internet premium
+locale: fr-FR
+persona:
+  id: sophie-martin
+  name: Sophie Martin
+  description: "Dirigeante d'une PME artisanale cherchant à développer sa présence en ligne."
+  tone: "Chaleureuse mais exigeante"
+  motivations:
+    - "Obtenir un site internet moderne sans compromettre la trésorerie"
+    - "Augmenter la visibilité locale"
+  objections:
+    - prix
+    - confiance
+objectives:
+  - id: discovery
+    description: "Qualifier le besoin digital de la cliente"
+    successCriteria:
+      - "Identifier les objectifs business"
+      - "Confirmer les canaux marketing actuels"
+  - id: closing
+    description: "Conclure sur un engagement clair"
+    successCriteria:
+      - "Valider le budget et le calendrier"
+      - "Fixer un prochain rendez-vous"
+steps:
+  - id: opening
+    title: Accueil et cadrage
+    prompt: "Bonjour Mme Martin, merci de prendre ce temps. Pour bien comprendre votre situation, pouvez-vous me parler de vos objectifs en ligne aujourd'hui ?"
+    expectedSkills:
+      - empathie
+      - écoute_active
+    objectionIds:
+      - confiance
+    hints:
+      - "Commence par reformuler son activité"
+      - "Rappelle la recommandation reçue"
+  - id: objection-pricing
+    title: Gestion du prix
+    prompt: "J'entends bien, mais 4 500€ pour un site ça reste élevé pour nous."
+    expectedSkills:
+      - gestion_objection
+      - argumentation_valeur
+    objectionIds:
+      - prix
+    hints:
+      - "Compare au coût d'inaction"
+      - "Propose un étalement ou un ROI précis"
+  - id: closing
+    title: Conclusion et engagement
+    prompt: "Si on avance, comment garantissez-vous que le site sera en ligne avant la fête des artisans en juin ?"
+    expectedSkills:
+      - closing
+      - planification
+    hints:
+      - "Présente une roadmap avec jalons"
+objections:
+  prix:
+    id: prix
+    summary: "Le budget semble trop élevé"
+    difficulty: medium
+    recommendedStrategies:
+      - "Valoriser le retour sur investissement"
+      - "Proposer un plan de paiement flexible"
+  confiance:
+    id: confiance
+    summary: "Crainte que la promesse ne soit pas tenue"
+    difficulty: medium
+    recommendedStrategies:
+      - "Partager des preuves sociales"
+      - "Mettre en avant l'accompagnement"
+knowledgeBase:
+  - id: success-story
+    title: Cas client boulangerie artisanale
+    content: "En 6 mois, +45% de leads grâce au nouveau site et à la stratégie locale."
+    tags:
+      - preuve
+      - artisanat
+scoring:
+  realtimeWeights:
+    empathie: 0.3
+    gestion_objection: 0.4
+    closing: 0.3
+  completionWeights:
+    objectifs_cadres: 0.5
+    objections_traitees: 0.5
